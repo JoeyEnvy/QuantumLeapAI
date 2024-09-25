@@ -1,48 +1,249 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>QuantumLeap AI - Revolutionizing the Future of Artificial Intelligence</title> <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> <style> :root { --primary-color: #00ffff; --secondary-color: #ff00ff; --background-color: #111; --text-color: #fff; --navbar-width: 250px; } * { box-sizing: border-box; margin: 0; padding: 0; } body { font-family: 'Roboto', sans-serif; background-color: var(--background-color); color: var(--text-color); line-height: 1.6; } .navbar { background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color)); padding: 1rem; position: fixed; width: 100%; z-index: 1000; } .navbar-container { display: flex; justify-content: space-between; align-items: center; } .navbar-logo { font-family: 'Orbitron', sans-serif; font-size: 1.5rem; font-weight: 700; } .navbar-links { display: flex; list-style-type: none; } .navbar-links li { margin-left: 1rem; } .navbar-links a { color: var(--background-color); text-decoration: none; font-weight: 700; } .hamburger { display: none; cursor: pointer; flex-direction: column; justify-content: space-around; width: 30px; height: 25px; background: transparent; border: none; } .hamburger-line { width: 100%; height: 3px; background-color: var(--background-color); transition: all 0.3s ease; } .main-content { padding-top: 80px; padding-right: 2rem; } h1, h2, h3 { font-family: 'Orbitron', sans-serif; text-align: center; margin-bottom: 2.5rem; } p { margin-bottom: 1.5rem; } .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: url('images/1.jpg') no-repeat center center/cover; position: relative; overflow: hidden; margin-bottom: 5rem; padding: 3rem; } .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); } .hero-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; } .hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; } .btn { display: inline-block; background-color: var(--primary-color); color: var(--background-color); padding: 1rem 2rem; border: none; border-radius: 30px; text-decoration: none; font-weight: 700; transition: background-color 0.3s ease, transform 0.3s ease; margin-top: 1.5rem; } .btn:hover { background-color: var(--secondary-color); transform: translateY(-3px); } .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 5rem; } .feature { background-color: rgba(255, 255, 255, 0.1); padding: 3rem; border-radius: 10px; text-align: center; transition: transform 0.3s ease; } .feature:hover { transform: translateY(-10px); } .feature img { width: 100px; height: 100px; margin-bottom: 2rem; object-fit: cover; border-radius: 50%; } .cta-section { text-align: center; margin-top: 5rem; padding: 5rem 0; background-color: rgba(255, 255, 255, 0.05); position: relative; } .cta-image { width: 200px; height: 200px; object-fit: cover; border-radius: 10px; position: absolute; top: 50%; transform: translateY(-50%); } .cta-image-left { left: 50px; } .cta-image-right { right: 50px; } @media screen and (max-width: 768px) { .navbar-links { display: none; flex-direction: column; position: fixed; left: -100%; top: 0; width: 80%; height: 100%; background-color: var(--background-color); transition: left 0.3s ease; z-index: 1001; padding-top: 70px; } .navbar-links.active { left: 0; } .navbar-links li { margin: 1rem 0; } .hamburger { display: flex; z-index: 1002; } .hero h1 { font-size: 2.5rem; } .cta-image { display: none; } } </style> </head> <body> <nav class="navbar"> <div class="navbar-container"> <div class="navbar-logo">QuantumLeap AI</div> <button class="hamburger" id="hamburger"> <span class="hamburger-line"></span> <span class="hamburger-line"></span> <span class="hamburger-line"></span> </button> <ul class="navbar-links" id="navLinks"> <li><a href="index.html">Home</a></li> <li><a href="products.html">Products</a></li> <li><a href="about.html">About</a></li> <li><a href="contact.html">Contact</a></li> </ul> </div> </nav>
-text
-<main class="main-content">
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to the Future of AI</h1>
-            <p>Revolutionizing industries with quantum-powered artificial intelligence</p>
-            <a href="#" class="btn">Discover More</a>
-        </div>
-    </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantumLeap AI - Revolutionizing the Future of Artificial Intelligence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00ffff;
+            --secondary-color: #ff00ff;
+            --background-color: #111;
+            --text-color: #fff;
+            --navbar-width: 250px;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .navbar {
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .navbar-links {
+            display: flex;
+            list-style-type: none;
+        }
+        .navbar-links li {
+            margin-left: 1rem;
+        }
+        .navbar-links a {
+            color: var(--background-color);
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            z-index: 1002; /* Ensure hamburger is above other elements */
+        }
+        .hamburger-line {
+            width: 100%;
+            height: 3px;
+            background-color: var(--background-color);
+            transition: all 0.3s ease;
+        }
+        .main-content {
+            padding-top: 80px; /* Space for fixed navbar */
+            padding-left: 1rem; /* Left padding */
+            padding-right: 1rem; /* Right padding */
+        }
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        p {
+            margin-bottom: 1.5rem;
+        }
+        .hero {
+            height: 80vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            background:url('images/1.jpg') no-repeat center center/cover; 
+            position: relative; 
+            overflow:hidden; 
+            margin-bottom:5rem; 
+            padding:3rem; 
+        }
+        .hero::before {
+           content:'';
+           position:absolute; 
+           top :0; 
+           left :0; 
+           right :0; 
+           bottom :0; 
+           background :rgba(0,0,0,0.5); 
+       }
+       .hero-content {
+           position :relative; 
+           z-index :1; 
+           max-width :800px; 
+           margin :0 auto; 
+       }
+       .hero h1 {
+           font-size :3.5rem; 
+           margin-bottom :1.5rem; 
+       }
+       .btn {
+           display:inline-block; 
+           background-color :var(--primary-color); 
+           color :var(--background-color); 
+           padding :1rem 2rem; 
+           border:none; 
+           border-radius :30px; 
+           text-decoration:none; 
+           font-weight :700; 
+           transition :background-color 0.3s ease, transform 0.3s ease; 
+           margin-top :1.5rem; 
+       }
+       .btn:hover {
+           background-color :var(--secondary-color); 
+           transform :translateY(-3px); 
+       }
+       .features {
+           display:grid;  
+           grid-template-columns :repeat(auto-fit, minmax(300px, 1fr));  
+           gap :3rem;  
+           margin-top :5rem;  
+       }
+       .feature {
+           background-color :rgba(255,255,255,0.1);  
+           padding :3rem;  
+           border-radius :10px;  
+           text-align:center;  
+           transition :transform 0.3s ease;  
+       }
+       .feature:hover {
+           transform :translateY(-10px);  
+       }
+       .feature img {
+          width :100px;  
+          height :100px;  
+          margin-bottom :2rem;  
+          object-fit :cover;  
+          border-radius :50%;  
+      }
+      .cta-section {
+          text-align:center;  
+          margin-top :5rem;  
+          padding :5rem 0;  
+          background-color :rgba(255,255,255,0.05);  
+          position :relative;  
+      }
+      .cta-image {
+          width :200px;  
+          height :200px;  
+          object-fit :cover;  
+          border-radius :10px;  
+          position:absolute;  
+          top :50%;  
+          transform :translateY(-50%);  
+      }
+      .cta-image-left { left :50px;}
+      .cta-image-right { right :50px;}
+      @media screen and (max-width: 768px) {
+          .navbar-links { display:none ; flex-direction:column ; position:absolute ; left:-100% ; top:-6% ; width:auto ; height:auto ; background-color:variables(--background-color) ; transition:left 0.3s ease ; z-index:-1;}
+          .navbar-links.active { left:-10%; z-index:-1;}
+          .navbar-links li { margin:.5rem ;}
+          .hamburger { display:flex ;}
+          .hero h1 { font-size:2.5rem;}
+          .cta-image { display:none;}
+          .main-content {padding-left:.5rem;padding-right:.5rem;}
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">QuantumLeap AI</div>
+            <button class="hamburger" id="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+             </button>
+             <ul class="navbar-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+             </ul>
+         </div>
+     </nav>
 
-    <section class="features">
-        <div class="feature">
-            <img src="images/2.jpg" alt="Quantum AI Icon">
-            <h2>Quantum AI</h2>
-            <p>Harness the power of quantum computing for unprecedented AI capabilities. Our quantum algorithms process complex data at speeds unimaginable with classical computing.</p>
-        </div>
-        <div class="feature">
-            <img src="images/3.jpg" alt="Machine Learning Icon">
-            <h2>Advanced ML</h2>
-            <p>State-of-the-art machine learning algorithms for complex problem-solving. Our neural networks adapt and learn from vast datasets, providing insights that drive innovation.</p>
-        </div>
-        <div class="feature">
-            <img src="images/4.jpg" alt="Data Analysis Icon">
-            <h2>Data Insights</h2>
-            <p>Extract meaningful insights from vast amounts of data in real-time. Our AI-powered analytics tools help businesses make data-driven decisions with confidence.</p>
-        </div>
-    </section>
+     <main class="main-content">
+         <section class="hero">
+             <div class="hero-content">
+                 <h1>Welcome to the Future of AI</h1>
+                 <p>Revolutionizing industries with quantum-powered artificial intelligence</p>
+                 <a href="#" class="btn">Discover More</a>
+             </div>
+         </section>
 
-    <section class="cta-section">
-        <img src="images/5.jpg" alt="AI Technology" class="cta-image cta-image-left">
-        <img src="images/6.jpg" alt="Quantum Computing" class="cta-image cta-image-right">
-        <h2>Ready to Transform Your Business?</h2>
-        <p>Experience the power of QuantumLeap AI and stay ahead of the competition.</p>
-        <a href="contact.html" class="btn">Get Started Today</a>
-    </section>
-</main>
+         <section class="features">
+             <div class="feature">
+                 <img src="images/2.jpg" alt="Quantum AI Icon">
+                 <h2>Quantum AI</h2>
+                 <p>Harness the power of quantum computing for unprecedented AI capabilities. Our quantum algorithms process complex data at speeds unimaginable with classical computing.</p>
+             </div>
+             <div class="feature">
+                 <img src="images/3.jpg" alt="Machine Learning Icon">
+                 <h2>Advanced ML</h2>
+                 <p>State-of-the-art machine learning algorithms for complex problem-solving. Our neural networks adapt and learn from vast datasets, providing insights that drive innovation.</p>
+             </div>
+             <div class="feature">
+                 <img src="images/4.jpg" alt="Data Analysis Icon">
+                 <h2>Data Insights</h2>
+                 <p>Extract meaningful insights from vast amounts of data in real-time. Our AI-powered analytics tools help businesses make data-driven decisions with confidence.</p>
+             </div>
+         </section>
 
-<script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
+         <section class="cta-section">
+             <img src="images/5.jpg" alt="AI Technology" class="cta-image cta-image-left">
+             <img src="images/6.jpg" alt="Quantum Computing" class="cta-image cta-image-right">
+             <h2>Ready to Transform Your Business?</h2>
+             <p>Experience the power of QuantumLeap AI and stay ahead of the competition.</p>
+             <a href="contact.html" class="btn">Get Started Today</a>
+         </section>
+     </main>
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-</script>
+     <script>
+         const hamburger = document.getElementById('hamburger');
+         const navLinks = document.getElementById('navLinks');
 
-</body> </html>
+         hamburger.addEventListener('click', () => {
+             navLinks.classList.toggle('active');
+         });
+     </script>
+</body>
+</html>
